@@ -1,0 +1,44 @@
+@font-face{
+    font-family: 'Open Sans';
+   src: url(Open_Sans.ttf);    
+}
+body {
+    margin: 0;
+    text-align: center;
+    min-height: 100vh;
+    background-color: #2e3440;
+    color:white;
+    font-family: 'Open Sans';
+    overflow: hidden;
+    font-weight: lighter;
+}
+.title{
+    margin-top:2%;
+    font-size: larger;
+}
+.options{
+    font-weight: 300;
+    padding-top: 10%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+ul {
+    background-color: #2b3039;
+    list-style-type: none;
+    margin:0;
+    padding:0;
+}
+.option{
+    margin:2px;
+    border-radius: 2px;
+    padding: 20px 40px 20px 40px;
+    transition: background-color 0.25s;
+    border-radius: 2px;
+}
+.option:hover{
+    background-color: #21252d;
+}
+
+
