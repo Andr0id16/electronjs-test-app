@@ -12,7 +12,7 @@ app.on("ready", function () {
     height: 720,
     titleBarStyle: "hidden",
     titleBarOverlay: {
-      color: "#2f3241",
+      color: "#2b3039",
       symbolColor: "#ffffff",
     },
     display_override: ["window-controls-overlay"],

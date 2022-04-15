@@ -8,22 +8,31 @@ body {
     min-height: 100vh;
     background-color: #2e3440;
     color:white;
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
+    font-size:small;
     overflow: hidden;
     font-weight: lighter;
 }
 .title{
-    margin-top:2%;
-    font-size: larger;
+    background-color: #2b3039;
+    padding:0.54%;
+    font-family: 'Open Sans';
+    font-size:smaller;
+    text-align: left;
+    margin-bottom: 0;
 }
-.options{
+.body{
     font-weight: 300;
-    padding-top: 10%;
+    /* padding-top: 10%; */
+    margin: 0;
     display: flex;
-    justify-content: center;
-    
-}
+    justify-content:flex-start;
 
+}
+.sidebar{
+    min-height:100vh;
+    background-color:#2b3039 ;
+}
 ul {
     background-color: #2b3039;
     list-style-type: none;
@@ -33,7 +42,7 @@ ul {
 .option{
     margin:2px;
     border-radius: 2px;
-    padding: 20px 40px 20px 40px;
+    padding: 18px 36px 18px 36px;
     transition: background-color 0.25s;
     border-radius: 2px;
 }
