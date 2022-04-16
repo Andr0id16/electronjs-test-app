@@ -10,6 +10,8 @@ app.on("ready", function () {
   mainWindow = new BrowserWindow({
     width: 1200,
     height: 720,
+    minWidth: 400,
+    minHeight: 300,
     titleBarStyle: "hidden",
     titleBarOverlay: {
       color: "#2b3039",

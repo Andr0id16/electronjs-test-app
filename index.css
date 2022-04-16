@@ -15,12 +15,14 @@ body {
 }
 .title{
     background-color: #2b3039;
-    padding:0.54%;
+    padding:8px;
     font-family: 'Open Sans';
     font-size:smaller;
     text-align: left;
     margin-bottom: 0;
+    -webkit-app-region:drag;
 }
+
 .body{
     font-weight: 300;
     /* padding-top: 10%; */
@@ -31,10 +33,10 @@ body {
 }
 .sidebar{
     min-height:100vh;
-    background-color:#2b3039 ;
+    background-color:#2b2f35 ;
 }
 ul {
-    background-color: #2b3039;
+    background-color: #2b2f35;
     list-style-type: none;
     margin:0;
     padding:0;
@@ -42,7 +44,7 @@ ul {
 .option{
     margin:2px;
     border-radius: 2px;
-    padding: 18px 36px 18px 36px;
+    padding: 10px 34px 10px 34px;
     transition: background-color 0.25s;
     border-radius: 2px;
 }
