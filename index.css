@@ -25,7 +25,7 @@ body {
 
 .body{
     font-weight: 300;
-    /* padding-top: 10%; */
+
     margin: 0;
     display: flex;
     justify-content:flex-start;
@@ -43,8 +43,10 @@ ul {
 }
 .option{
     margin:2px;
+    font-size: small;
+    text-align: left;
     border-radius: 2px;
-    padding: 10px 34px 10px 34px;
+    padding: 10px 34px 10px 15px;
     transition: background-color 0.25s;
     border-radius: 2px;
 }
