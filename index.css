@@ -54,4 +54,15 @@ ul {
     background-color: #21252d;
 }
 
+.result{
+        width: 200px;
+        text-align: center;
+        height: 200px;
+        position: absolute;
+        left: 55%;
+        margin-left: -100px;
+        top: 40%;
+        margin-top: -100px;
+        display:none;
+}
 

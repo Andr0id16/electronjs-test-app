@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "browserify": "^17.0.0",
     "electron": "^18.0.4",
     "electron-is-dev": "^2.0.0",
     "isdev": "^1.0.1"
