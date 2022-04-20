@@ -1,7 +1,7 @@
 var socket = document.querySelector(".socket");
 var option = document.getElementById("option");
 var result = document.querySelector(".result");
-processtime = 8000;
+var processtime = 8000;
 function preloadershow() {
   socket.style.display = "block";
 }
@@ -14,6 +14,11 @@ function resultshow() {
 function resulthide() {
   result.style.display = "none";
 }
+function putResult() {
+  preloaderhide();
+  resultshow();
+}
+
 function resultcalculate() {
   const resultPromise = new Promise((resolve, reject) => {
     preloadershow();
@@ -26,7 +31,6 @@ function resultcalculate() {
   resultPromise.then(putResult);
 }
 
-function putResult() {
-  preloaderhide();
-  resultshow();
-}
+module.exports = { resultcalculate: resultcalculate };
+
+//browserify preloader.js --standalone bundle> bundle.js

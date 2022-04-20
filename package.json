@@ -3,7 +3,8 @@
     "browserify": "^17.0.0",
     "electron": "^18.0.4",
     "electron-is-dev": "^2.0.0",
-    "isdev": "^1.0.1"
+    "isdev": "^1.0.1",
+    "python-shell": "^3.0.1"
   },
   "name": "electronjs-test-app",
   "version": "1.0.0",
