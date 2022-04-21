@@ -2,7 +2,6 @@ const electron = require("electron");
 const url = require("url");
 const path = require("path");
 const isDev = require("isDev");
-const { createPublicKey } = require("crypto");
 const { app, BrowserWindow, Menu } = electron;
 let mainWindow;
 
