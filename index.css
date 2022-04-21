@@ -50,7 +50,7 @@ ul {
     transition: background-color 0.25s;
     border-radius: 2px;
 }
-.option:hover{
+.option:hover,button:hover{
     background-color: #21252d;
 }
 
@@ -65,4 +65,24 @@ ul {
         margin-top: -100px;
         display:none;
 }
+label{
+    font-size: medium;    
+}
+input:focus{
+    outline: none;
+}
+input{
+    margin-top:10px;
+    border:none;
+    background-color: #2b2f35;
+    color:white;
 
+}
+button{
+    margin:10px;
+    border:none;
+    background-color: #2b2f35;
+    color:white;
+    border-radius: 2px;
+    padding:12px;
+}

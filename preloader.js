@@ -1,7 +1,7 @@
 var socket = document.querySelector(".socket");
 var option = document.getElementById("option");
 var result = document.querySelector(".result");
-var processtime = 8000;
+var processtime = 1000;
 function preloadershow() {
   socket.style.display = "block";
 }
@@ -30,7 +30,5 @@ function resultcalculate() {
 
   resultPromise.then(putResult);
 }
-
-module.exports = { resultcalculate: resultcalculate };
 
 //browserify preloader.js --standalone bundle> bundle.js
