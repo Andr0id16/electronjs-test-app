@@ -14,7 +14,9 @@ app.use(
 app.post("/", function (req, res) {
   setTimeout(() => {
     console.log("get");
-    res.write(JSON.stringify({ msg: 123 }));
+    var ip_addr = req.body.ip_addr;
+    var port = req.body.port;
+    res.write(JSON.stringify({ ip_addr: ip_addr, port: port }));
     res.end();
   }, 3000);
 });
