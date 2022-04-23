@@ -1,6 +1,8 @@
 var socket = document.querySelector(".socket");
 var option = document.getElementById("option");
-var result = document.querySelector(".result");
+var form = document.querySelector(".form");
+var ip_addr = document.getElementById("ip_addr");
+var port = document.getElementById("port");
 var processtime = 1000;
 function preloadershow() {
   socket.style.display = "block";
@@ -8,27 +10,33 @@ function preloadershow() {
 function preloaderhide() {
   socket.style.display = "none";
 }
-function resultshow() {
-  result.style.display = "block";
+function formshow() {
+  form.style.display = "block";
 }
-function resulthide() {
-  result.style.display = "none";
+function formhide() {
+  port.value = "";
+  ip_addr.value = "";
+  form.style.display = "none";
 }
-function putResult() {
+function putform() {
   preloaderhide();
-  resultshow();
+  formshow();
 }
 
-function resultcalculate() {
-  const resultPromise = new Promise((resolve, reject) => {
+function getinput() {
+  const formPromise = new Promise((resolve, reject) => {
+    formhide();
     preloadershow();
     setTimeout(() => {
-      console.log("result calculated");
-      resolve("calculated result");
+      console.log("loading form");
+      resolve("loaded form");
     }, processtime);
   });
 
-  resultPromise.then(putResult);
+  formPromise.then((message) => {
+    console.log(message);
+    putform();
+  });
 }
 
 //browserify preloader.js --standalone bundle> bundle.js
