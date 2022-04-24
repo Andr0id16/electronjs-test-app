@@ -3,6 +3,7 @@ var option = document.getElementById("option");
 var form = document.querySelector(".form");
 var ip_addr = document.getElementById("ip_addr");
 var port = document.getElementById("port");
+var result = document.querySelector(".result");
 var processtime = 1000;
 function preloadershow() {
   socket.style.display = "block";
@@ -20,7 +21,21 @@ function formhide() {
 }
 function putform() {
   preloaderhide();
+  resulthide();
   formshow();
+}
+function putresult() {
+  preloaderhide();
+  formhide();
+  resultshow();
+}
+function resultshow() {
+  result.style.display = "block";
+}
+function resulthide() {
+  port.value = "";
+  ip_addr.value = "";
+  result.style.display = "none";
 }
 
 function getinput() {

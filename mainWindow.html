@@ -41,6 +41,7 @@
           type="text"
           id="ip_addr"
           name="ip_addr"
+          placeholder="ip/domain"
           required
         /><br />
         <label for="port">Port</label><br />
@@ -53,6 +54,7 @@
         /><br />
         <button type="submit" value="submit" onclick="sendval()">submit</button>
       </div>
+      <div class="result"></div>
     </div>
     <script src="addpreloader.js"></script>
     <script type="text/javascript" src="preloader.js"></script>
@@ -80,6 +82,17 @@
           })
           .then((data) => {
             console.log(data);
+            var result = document.querySelector(".result");
+            for (let key in data) {
+              var div = document.createElement("div");
+              var text = document.createTextNode(`${key} : ${data[key]}`);
+              div.classList.add("resultitem");
+              div.appendChild(text);
+              result.appendChild(div);
+            }
+            // result.innerHTML = JSON.stringify();
+            formhide();
+            resultshow();
           })
           .catch(() => {
             console.log("error");

@@ -1,5 +1,7 @@
 var express = require("express");
 const cors = require("cors");
+const apptoshell = require("./apptoshell");
+const { PythonShell } = require("python-shell");
 var app = express();
 var bodyparser = require("body-parser");
 app.use(bodyparser.urlencoded({ extended: false }));
@@ -11,13 +13,10 @@ app.use(
 );
 app.post("/", function (req, res) {
   setTimeout(() => {
-    console.log("get");
     var ip_addr = req.body.ip_addr;
     var port = req.body.port;
-    console.log(ip_addr);
-    res.setHeader("Content-Type", "application/json");
-    res.send(JSON.stringify({ a: 1 }));
-  }, 3000);
+    apptoshell(ip_addr, port, res);
+  }, 500);
 });
 app.get("/", function (req, res) {
   setTimeout(() => {

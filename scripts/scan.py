@@ -187,18 +187,18 @@ from socket import timeout
 from scapy.all import *
 
 src_port = RandShort()
-dst_ip = "216.58.196.163"
+dst_ip = input()
 
-dst_port = 12
+dst_port = int(input())
 
 response = sr1(IP(dst=dst_ip)/TCP(sport=src_port, dport=dst_port), timeout=3)
 
 
 if(response == None):
-    print(f"Port {dst_port} is closed")
+    print(f"Port closed")
 else:
     if(response.haslayer(TCP)):
         if(response.getlayer(TCP).flags == "SA"):
-            print("Open")
+            print("Port Open")
         elif(response.getlayer(TCP).flags == "RA"):
-            print(f"Port {dst_port} is open but in use")
+            print(f"Port open-but-used")
