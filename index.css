@@ -33,9 +33,14 @@ body {
 }
 .sidebar{
     min-height:100vh;
-    background-color:#2b2f35 ;
+    padding-top:30vh;
+    background-color:#2e3440 ;
+
+    
 }
 ul {
+    position: relative;
+
     background-color: #2b2f35;
     list-style-type: none;
     margin:0;
@@ -75,6 +80,8 @@ ul {
     top: 40%;
     margin-top: -100px;
     display:none;
+    background-color: #2b2f35;
+    border-radius :5px;
 }
 .resultitem{
     margin:2px;

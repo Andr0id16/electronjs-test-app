@@ -22,7 +22,7 @@
           <li class="option" onclick="getinput()" value="1">
             TCP connect scan
           </li>
-          <li class="option" onclick="getinput()" value="2">
+          <!-- <li class="option" onclick="getinput()" value="2">
             TCP stealth scan
           </li>
           <li class="option" onclick="getinput()" value="3">XMAS scan</li>
@@ -30,7 +30,7 @@
           <li class="option" onclick="getinput()" value="5">NULL scan</li>
           <li class="option" onclick="getinput()" value="6">TCP ACK scan</li>
           <li class="option" onclick="getinput()" value="7">TCP window scan</li>
-          <li class="option" onclick="getinput()" value="8">UDP scan</li>
+          <li class="option" onclick="getinput()" value="8">UDP scan</li> -->
         </ul>
       </div>
       <div id="preloader"></div>
@@ -72,6 +72,7 @@
           },
           body: JSON.stringify({ ip_addr: ip_addr, port: port }),
         });
+
         formhide();
         preloadershow();
         resPromise

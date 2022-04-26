@@ -33,13 +33,13 @@ function resultshow() {
   result.style.display = "block";
 }
 function resulthide() {
-  port.value = "";
-  ip_addr.value = "";
+  result.innerHTML = "";
   result.style.display = "none";
 }
 
 function getinput() {
   const formPromise = new Promise((resolve, reject) => {
+    resulthide();
     formhide();
     preloadershow();
     setTimeout(() => {

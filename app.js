@@ -12,11 +12,14 @@ app.use(
   })
 );
 app.post("/", function (req, res) {
-  setTimeout(() => {
-    var ip_addr = req.body.ip_addr;
-    var port = req.body.port;
-    apptoshell(ip_addr, port, res);
-  }, 500);
+  // setTimeout(() => {
+  //   var ip_addr = req.body.ip_addr;
+  //   var port = req.body.port;
+  //   apptoshell(ip_addr, port, res);
+  // }, 100);
+  var ip_addr = req.body.ip_addr;
+  var port = req.body.port;
+  apptoshell(ip_addr, port, res);
 });
 app.get("/", function (req, res) {
   setTimeout(() => {
