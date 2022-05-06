@@ -185,13 +185,26 @@
 
 from socket import timeout
 from scapy.all import *
+import requests
 
+import socket
 src_port = RandShort()
 dst_ip = input()
 
 dst_port = int(input())
 
 response = sr1(IP(dst=dst_ip)/TCP(sport=src_port, dport=dst_port), timeout=3)
+
+
+def fingerprinting(domain):
+    req = requests.get("http://"+socket.gethostbyname(domain))
+    headers = ['Server']
+    for header in headers:
+        try:
+            result = req.headers[header]
+            print(f"server {header}")
+        except Exception as error:
+            print("server notfound")
 
 
 if(response == None):

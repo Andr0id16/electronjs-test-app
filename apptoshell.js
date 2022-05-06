@@ -17,10 +17,20 @@ module.exports = function (ip_addr, port, res) {
     console.log(outputs);
     res.setHeader("Content-Type", "application/json");
     outputs = outputs.slice(-2);
+    console.log(outputs);
     temp = outputs.shift();
+    console.log(temp);
     temp = temp.split(", ");
-    temp.push(outputs.pop());
-    outputs = temp;
+    console.log(temp);
+    // temp.push(outputs.pop());
+    // console.log(temp);
+    // outputs = temp;
+    for (let i = 0; i < 3; i++) {
+      temp[i] = temp[i].slice(0, temp[i].lastIndexOf(" "));
+    }
+    console.log(temp);
+    outputs.unshift(temp[0], temp[1], temp[2]);
+    console.log(outputs);
     temp = "";
     for (let i = 0; i < 4; i++) {
       outputs[i] = outputs[i].split(" ")[1];
